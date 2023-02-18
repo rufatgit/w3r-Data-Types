@@ -1,3 +1,72 @@
+
+//Ex 1. Write a C# Sharp program that takes three letters as input and display them in reverse order.
+Console.WriteLine("Enter 3 chars");
+string[] input=Console.ReadLine().Split(' ');
+char[] chars=Array.ConvertAll(input, char.Parse);
+
+chars = chars.Reverse().ToArray();
+
+foreach (char c in chars)
+{
+    Console.Write(c+" ");
+}
+
+
+
+
+//Ex 2. Write a C# Sharp program that takes a number and a width also a number, as input and then displays a triangle of that width, using that number. 
+Console.WriteLine("Enter a number");
+int number = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("Enter the desired width");
+int width = Convert.ToInt32(Console.ReadLine());
+
+
+
+for (int j = 0; j < width; j++)
+{
+    for (int i = j; i < width; i++)
+    {
+        Console.Write(number);
+    }
+    Console.WriteLine();
+}
+
+
+
+
+//Ex 3. Write a C# Sharp program that takes userid and password as input (type string). After 3 wrong attempts, user will be rejected.
+string id = "345";
+string password = "blabla345";
+
+for (int i = 0; i < 3; i++)
+{
+    Console.WriteLine("Enter ID: ");
+    string check_id = Console.ReadLine();
+
+    Console.WriteLine("Enter password: ");
+    string check_password = Console.ReadLine();
+
+
+    if (check_id == id && check_password == password)
+    {
+        Console.WriteLine("Correct!");
+        break;
+
+    }
+    else if (i == 2)
+    {
+        Console.WriteLine("Incorrect. So many attempts. Reset Password?");
+    }
+    else
+    {
+        Console.WriteLine($"Incorrect. {3 - i - 1} attemps left. Try again.");
+        continue;
+    }
+
+}
+
+
 //4. Write a C# Sharp program that takes two numbers as input and perform an operation (+,-,*,x,/) on them and displays the result of that operation.
 
 Console.WriteLine("Enter 2 numbers to perform operations.");
