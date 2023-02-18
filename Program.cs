@@ -1,4 +1,5 @@
-﻿
+
+//4. Write a C# Sharp program that takes two numbers as input and perform an operation (+,-,*,x,/) on them and displays the result of that operation.
 
 Console.WriteLine("Enter 2 numbers to perform operations.");
 double a=int.Parse(Console.ReadLine());
