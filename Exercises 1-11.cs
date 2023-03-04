@@ -32,7 +32,7 @@ for (int j = 0; j < width; j++)
     Console.WriteLine();
 }
 
-
+ 
 
 
 //Ex 3. Write a C# Sharp program that takes userid and password as input (type string). After 3 wrong attempts, user will be rejected.
